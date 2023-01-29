@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import styled from "styled-components";
+
+const Container = styled.div`
+  color: #ffffff;
+  width: 500px;
+  height: 500px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <body>
+        <div className="container">
+          <div className="status-container">
+            <div className="group-bullet">
+              <div className="bullet"></div>
+              <p className="bullet-text">Test1</p>
+            </div>
+            <div className="group-bullet">
+              <div className="bullet"></div>
+              <p className="bullet-text">Test2</p>
+            </div>
+            <div className="group-bullet">
+              <div className="bullet"></div>
+              <p className="bullet-text">Test3</p>
+            </div>
+          </div>
+        </div>
+      </body>
+    </>
   );
 }
 
