@@ -1,7 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import styled from "styled-components";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import DeliveryForm from "./components/DeliveryForm/DeliveryForm";
+import { useState } from "react";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 const Container = styled.div`
   color: #ffffff;
@@ -10,22 +12,49 @@ const Container = styled.div`
 `;
 
 function App() {
+  const [activeBullet, setActiveBullet] = useState<number>(1);
   return (
     <>
       <body>
         <div className="container">
-          <div className="status-container">
-            <div className="group-bullet">
-              <div className="bullet"></div>
-              <p className="bullet-text">Test1</p>
+          <ProgressBar active={activeBullet} />
+          <div className="card-content">
+            <div className="back-button">
+              <AiOutlineArrowLeft size={23} />
+              <p>Back to Cart</p>
             </div>
-            <div className="group-bullet">
-              <div className="bullet"></div>
-              <p className="bullet-text">Test2</p>
-            </div>
-            <div className="group-bullet">
-              <div className="bullet"></div>
-              <p className="bullet-text">Test3</p>
+            <div className="card-content-container">
+              <DeliveryForm />
+              <div className="summary">
+                <div className="summary-content">
+                  <div>
+                    <h1>Summary</h1>
+                    <p>10 items purchased</p>
+                  </div>
+                  <div className="summary-content-total">
+                    <div className="summary-content-total-item">
+                      <p>Cost of goods</p>
+                      <h3>500,000</h3>
+                    </div>
+                    <div className="summary-content-total-item">
+                      <p>Dropshipping Fee</p>
+                      <h3>5,900</h3>
+                    </div>
+                    <div className="summary-content-total-item">
+                      <h2>Total</h2>
+                      <h2>505,900</h2>
+                    </div>
+                    <div
+                      className="continue-button"
+                      onClick={() => setActiveBullet(activeBullet + 1)}
+                    >
+                      <p className="continue-button-text">
+                        Continue to Payment
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,107 @@
+div.delivery-details {
+  width: 100%;
+  margin-right: 30px;
+}
+div.delivery-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+div.content-header-title > p {
+  color: #ff8a00;
+  display: inline-block;
+  font-size: 36px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  z-index: 1;
+}
+div.content-header-title > div {
+  width: 250px;
+  height: 8px;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  position: absolute;
+  opacity: 30%;
+  bottom: 6px;
+}
+
+div.delivery-details-header > form > label {
+  padding-left: 10px;
+}
+div.delivery-details-form {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+label.form-wrapper {
+  position: relative;
+}
+label.form-wrapper:nth-child(odd) {
+  width: 400px;
+  height: 60px;
+}
+label.form-wrapper:nth-child(even) {
+  width: 300px;
+  height: 60px;
+}
+label.form-wrapper input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 1em;
+  font-family: "Montserrat";
+  font-weight: 600;
+  outline: none;
+  border: 1px solid gray;
+}
+label.form-wrapper input:focus {
+  border-color: #1bd97b;
+}
+label.form-wrapper input:focus ~ label,
+label.form-wrapper input:valid ~ label {
+  color: #1bd97b;
+  transform: translateY(-20px);
+}
+label.form-wrapper > label {
+  transition: 0.5s;
+  color: gray;
+  font-weight: 600;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  pointer-events: none;
+}
+label.form-wrapper-address {
+  position: relative;
+  width: 400px;
+  height: 120px;
+}
+textarea {
+  padding-left: 10px;
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  resize: none;
+}
+label.form-wrapper-address > label {
+  transition: 0.5s;
+  color: gray;
+  font-weight: 600;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  pointer-events: none;
+}
+label.form-wrapper-address textarea:focus ~ label,
+label.form-wrapper-address textarea:valid ~ label {
+  color: #1bd97b;
+  transform: translateY(-20px);
+}
+label.form-wrapper-address textarea:focus {
+  border-color: #1bd97b;
+}

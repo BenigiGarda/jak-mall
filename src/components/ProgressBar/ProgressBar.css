@@ -1,0 +1,51 @@
+#progress-bar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: -33px;
+  margin: 0 auto;
+  width: 500px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: #fffae6;
+}
+div.group-bullet {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+}
+div.bullet-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  color: #ffffff;
+  font-size: 18px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ff8a00;
+}
+div.bullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  color: #ff8a00;
+  font-size: 18px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #e5ccb4;
+ 
+}
+p.bullet-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  color: #ff8a00;
+}
